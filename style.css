@@ -204,7 +204,7 @@ body {
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
     body {
-        background: url(/mobile.jpg) no-repeat;
+        background: url(./mobile.jpg) no-repeat;
         background-size: cover;
         background-position: center;
     }
