@@ -1,0 +1,325 @@
+@import url("https:/fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    background: url("/laptop.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+}
+
+/* container  */
+.container{
+    padding: 10px 10%;
+ }
+ nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    flex-wrap:wrap;
+ }
+ .logo{
+    width:140px;
+    color: #2EC4B6;
+ }
+ nav ul li{
+        display:inline-block;
+        list-style:none;
+        margin:10px 20px;
+ }
+ nav ul li a{
+    color:#fff;
+    text-decoration: none;
+    font-size: 18px;
+    position:relative; 
+          /* added on 26-06 */
+    animation: slideRight 5s ease forwards;
+ }
+ nav ul li a::after{
+    content:'';
+    width:0;
+    height:3px;
+    background:#2EC4B6;
+    position:absolute;
+    left:0;
+    bottom: -6px;
+    transition:0.5s;
+ }
+ nav ul li a:hover::after{
+    width: 100%;
+ }
+
+/* end */
+
+
+
+
+.wrapper {
+    width: 420px;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,.2);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+    color: #fff;
+    border-radius: 10px;
+    padding: 30px 40px;
+    margin: auto 0;  /* Centering the wrapper vertically */
+    /* flex: 1 0 auto;  Allows the wrapper to grow and take up available space */
+}
+
+.wrapper h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
+.wrapper .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.wrapper .input-box:hover {
+    border-color: #ffcc00; 
+    transform: scale(1.05); 
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255,255,255,.2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder {
+    color: #fff;
+}
+
+.input-box i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    transition: 0.3s ease;
+}
+
+.input-box i:hover {
+    color: greenyellow;
+    transform: scale(1);
+    box-shadow: 0 0 5px yellow;
+}
+
+.wrapper .remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+}
+
+.remember-forgot label input {
+    accent-color: #fff;
+    margin-right: 3px;
+}
+
+.remember-forgot a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.wrapper .btn {
+    width: 100%;
+    height: 45px;
+    background: #eeebd0;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #06060633;
+    font-weight: 600;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+.wrapper .btn:hover {
+    background-color: aqua;
+    color: coral;
+    transform: scale(1.05);
+}
+
+.wrapper .register-link {
+    font-size: 14.5;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.register-link p a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link p a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    width: 100%;
+    text-align: center;
+    padding: 15px ;
+    background:rgb(106, 59, 100);
+    font-weight: 300;
+    align-content: end;
+    flex-shrink: 0;  /* Prevents the copyright div from shrinking */
+    color: whitesmoke;
+}
+
+.copyright i {
+    color: #3cc2e8;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    body {
+        background: url(/mobile.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    /* container */
+    nav .fa-solid{
+        display: block;
+        font-size: 25px;
+      }
+      nav ul{
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+      }
+      nav ul li{
+        display: block;
+        margin: 25px;
+      }
+      nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+      }
+      /* end */
+
+
+
+
+
+    .wrapper {
+        width: 90%;
+        padding: 20px;
+        backdrop-filter: none;
+        
+    }
+
+    .wrapper h1 {
+        font-size: 28px;
+    }
+
+    .input-box {
+        height: 40px;
+        margin: 20px 0;
+    }
+
+    .input-box input {
+        padding: 15px 35px 15px 15px;
+    }
+
+    .input-box i {
+        font-size: 16px;
+    }
+
+    .remember-forgot {
+        font-size: 12px;
+    }
+
+    .btn {
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .register-link {
+        font-size: 12px;
+    }
+
+    .copyright {
+        padding: 20px;
+    }
+}
+
+/* @media (max-width: 480px) {
+    .wrapper {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .wrapper h1 {
+        font-size: 24px;
+    }
+
+    .input-box {
+        height: 35px;
+        margin: 15px 0;
+    }
+
+    .input-box input {
+        padding: 10px 30px 10px 10px;
+    }
+
+    .input-box i {
+        font-size: 14px;
+    }
+
+    .remember-forgot {
+        font-size: 10px;
+    }
+
+    .btn {
+        height: 35px;
+        font-size: 12px;
+    }
+
+    .register-link {
+        font-size: 10px;
+    }
+
+    .copyright {
+        padding: 15px;
+    }
+} */
