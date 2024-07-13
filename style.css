@@ -204,9 +204,15 @@ body {
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
     body {
-        background: url(./mobile.jpg) no-repeat;
+        background: url(./mobile3.jpg) no-repeat;
         background-size: cover;
         background-position: center;
+    }
+    .logo{
+        width: 270px;
+    }
+    nav i{
+        color: #fff;
     }
 
     /* container */
@@ -244,7 +250,14 @@ body {
     .wrapper {
         width: 90%;
         padding: 20px;
-        backdrop-filter: none;
+        background: transparent;
+        border: 2px solid rgba(255,255,255,.2);
+        backdrop-filter: blur(3px);
+        box-shadow: 0 0 10px rgba(0,0,0,.2);
+        color: #e78fed;
+        border-radius: 10px;
+        padding: 30px 40px;
+        margin: auto 0;  /* Centering the wrapper vertically */
         
     }
 
